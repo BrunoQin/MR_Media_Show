@@ -1,0 +1,28 @@
+{
+  "name": "mr_media_show",
+  "version": "1.0.0",
+  "description": "website show",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server":"node_modules/.bin/gulp serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrunoQin/MR_Media_Show.git"
+  },
+  "keywords": [
+    "html5",
+    "css3"
+  ],
+  "author": "arlex",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrunoQin/MR_Media_Show/issues"
+  },
+  "homepage": "https://github.com/BrunoQin/MR_Media_Show#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1"
+  }
+}
