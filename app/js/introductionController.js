@@ -6,8 +6,8 @@
 var introductionController = function(){
     var showPage = function(){
         console.log("execute");
-        $("#container div").hide();
-        $("#container1").show();
+        $("#container > div").hide();
+        $("#introduction").show();
     };
     var controller = {};
     controller.execute = showPage;

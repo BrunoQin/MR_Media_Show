@@ -9,21 +9,32 @@
     <script src="vendor/hasher.js"></script>
     <script src="vendor/crossroads.js"></script>
     <script src="js/introductionController.js"></script>
+    <script src="js/partTwoController.js"></script>
     <script src="js/main.js"></script>
 </head>
 <body>
     <header>
-        <a href="#homepage" class="active">主页</a>
+        <a href="#introduction" class="active">主页</a>
         <a href="#part1" class="active">Part1</a>
         <a href="#part2" class="active">Part2</a>
         <a href="#part3" class="active">Part3</a>
     </header>
 
     <div id="container">
-        <div id="container1" >首页内容展示</div>
+        <div id="introduction" >
+            <div class="border" data-position = "top"></div>
+            <div class="border" data-position = "right"></div>
+            <div class="border" data-position = "bottom"></div>
+            <div class="border" data-position = "left"></div>
+            <div id="video-container">
+                <video autoplay loop src="video/intro.mp4" height="950px" width="1690px"></video>
+            </div>
+            <div class="video-shadow"></div>
+        </div>
         <div id="container2" >Part1部分</div>
         <div id="container3" >Part2部分</div>
         <div id="container4" >Part3部分</div>
     </div>
+    <div id="web-background"></div>
 </body>
 </html>

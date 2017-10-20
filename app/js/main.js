@@ -1,5 +1,6 @@
 var controller = {
-    introduction: introductionController()
+    introduction: introductionController(),
+    partTwo: partTwoController()
 }
 
 $(function () {
@@ -8,7 +9,7 @@ $(function () {
         loadPage(controller.introduction);
     })
     crossroads.addRoute("part1",function(){
-
+        loadPage(controller.partTwo);
     })
     crossroads.addRoute("part2",function(){
 
