@@ -1,6 +1,9 @@
 var controller = {
     introduction: introductionController(),
-    partTwo: partTwoController()
+    service: serviceController(),
+    customer: customerController(),
+    joinus: joinusController(),
+    connection: connectionController()
 }
 
 $(function () {
@@ -8,14 +11,17 @@ $(function () {
     crossroads.addRoute("introduction",function(){
         loadPage(controller.introduction);
     })
-    crossroads.addRoute("part1",function(){
-        loadPage(controller.partTwo);
+    crossroads.addRoute("service",function(){
+        loadPage(controller.service);
     })
-    crossroads.addRoute("part2",function(){
-
+    crossroads.addRoute("customer",function(){
+        loadPage(controller.customer);
     })
-    crossroads.addRoute("part3",function(){
-
+    crossroads.addRoute("joinus",function(){
+        loadPage(controller.joinus);
+    })
+    crossroads.addRoute("connection",function(){
+        loadPage(controller.connection);
     })
     crossroads.routed.add(console.log, console); //log all routes
 

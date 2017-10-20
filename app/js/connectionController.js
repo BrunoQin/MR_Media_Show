@@ -2,11 +2,12 @@
  * Created by arlex on 2017/10/20.
  *
  */
-//主页的初始化
-var introductionController = function(){
+
+//联系我们界面的初始化
+var connectionController = function(){
     var showPage = function(){
         $("#container > div").hide();
-        $("#introduction").show();
+        $("#connection").show();
     };
     var controller = {};
     controller.execute = showPage;

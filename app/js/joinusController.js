@@ -1,13 +1,13 @@
 /**
  * Created by arlex on 2017/10/20.
- * 针对主页面利用JS做一些初始化的操作
+ *
  */
 
-var partTwoController = function(){
+//联系我们界面的初始化
+var joinusController = function(){
     var showPage = function(){
-        console.log("execute");
         $("#container > div").hide();
-        $("#container2").show();
+        $("#joinus").show();
     };
     var controller = {};
     controller.execute = showPage;

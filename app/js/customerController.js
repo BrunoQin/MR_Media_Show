@@ -2,11 +2,11 @@
  * Created by arlex on 2017/10/20.
  *
  */
-//主页的初始化
-var introductionController = function(){
+//我们的客户界面的初始化
+var customerController = function(){
     var showPage = function(){
         $("#container > div").hide();
-        $("#introduction").show();
+        $("#customer").show();
     };
     var controller = {};
     controller.execute = showPage;
