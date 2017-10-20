@@ -1,6 +1,4 @@
-# MR_Media_Show
-
-####How to run?
+### How to run?
 
 ```
 拉下来项目之后，进入项目根目录，执行命令npm install
