@@ -8,6 +8,13 @@ var customerController = function(){
         $("#container > div").hide();
         $("#customer").show();
     };
+    $(document).ready(function(){
+        $(".logoClass img").mouseover(function () {
+            $(this).removeClass().addClass('animated rubberBand').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $(this).removeClass();
+            });
+        });
+    });
     var controller = {};
     controller.execute = showPage;
     return controller;
