@@ -8,25 +8,25 @@ var serviceController = function(){
         $("#container > div").hide();
         $("#service").show();
     };
+    var flag = true;
 
 
     $(document).ready(function(){
-        var width = window.innerWidth;
-        var height = window.innerHeight;
-        $("#container").css("width",width);
-        $("#container").css("height",height);
         $("#test").click(
             function () {
-                $('#slide').addClass('trans-layer').animate({top:'-1250px'},900,function () {
-                    $('#slide').removeClass('trans-layer');
-                    $('#slide').css("top",0);
-                });
+                clearPage($('.img-background'));
+                setTimeout(function () {
+                    nextPage($('.img-background'));
+                },200);
             }
         );
     });
+
+
 
 
     var controller = {};
     controller.execute = showPage;
     return controller;
 }
+
