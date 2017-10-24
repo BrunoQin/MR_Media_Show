@@ -8,6 +8,11 @@ var serviceController = function(){
         $("#container > div").hide();
         $("#service").show();
     };
+
+    $('#test1').on('click',function () {
+        $('#test').addClass('trans-layer');
+    });
+
     var controller = {};
     controller.execute = showPage;
     return controller;
