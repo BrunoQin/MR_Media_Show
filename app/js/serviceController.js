@@ -8,9 +8,12 @@ var serviceController = function(){
         $("#container > div").hide();
         $("#service").show();
     };
-
-    $('#test1').on('click',function () {
-        $('#test').addClass('trans-layer');
+    $(document).ready(function(){
+        $("#test1").click(
+            function () {
+                $('#test').addClass('trans-layer');
+            }
+        );
     });
 
     var controller = {};
