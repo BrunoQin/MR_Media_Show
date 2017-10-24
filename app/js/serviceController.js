@@ -8,13 +8,23 @@ var serviceController = function(){
         $("#container > div").hide();
         $("#service").show();
     };
+
+
     $(document).ready(function(){
-        $("#test1").click(
+        var width = window.innerWidth;
+        var height = window.innerHeight;
+        $("#container").css("width",width);
+        $("#container").css("height",height);
+        $("#test").click(
             function () {
-                $('#test').addClass('trans-layer');
+                $('#slide').addClass('trans-layer').animate({top:'-1250px'},900,function () {
+                    $('#slide').removeClass('trans-layer');
+                    $('#slide').css("top",0);
+                });
             }
         );
     });
+
 
     var controller = {};
     controller.execute = showPage;

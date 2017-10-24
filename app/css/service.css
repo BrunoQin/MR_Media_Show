@@ -1,26 +1,23 @@
-/*.trans-layer, .section {*/
-    /*position: absolute;*/
-    /*width: 100%;*/
-    /*height: 100%;*/
-    /*top: 0;*/
-    /*left: 0;*/
-    /*bottom: 0;*/
-    /*right: 0;*/
-/*}*/
+
 
 .trans-layer {
+    position: absolute;
     width: 100%;
     height: 100%;
-    background:red;
-    position:absolute;
-    animation:mymove 6s 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #000;
 }
 
 
-
-@keyframes mymove
-{
-    from {top:0px;}
-    to {top:-12000px;}
+.img-background {
+    background-size: cover;
+    background-image: url(../img/service-back.jpg);
 }
 
+html,body{
+    width: 100%;
+    height: 100%;
+}

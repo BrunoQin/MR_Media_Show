@@ -1,6 +1,8 @@
 /*只设置container下面的第一层div隐藏*/
 #container > div {
     display: none;
+    height: 100%;
+    width: 100%;
 }
 
 header{
