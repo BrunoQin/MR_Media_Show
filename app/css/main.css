@@ -28,8 +28,20 @@ header a{
 
 }
 
-/*翻页*/
+#web-background{
+    background-color: #35017f;
+    z-index: -5;
+}
 
+.full-page{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*翻页*/
 .trans-layer-next {
     position: absolute;
     width: 100%;
@@ -98,6 +110,6 @@ header a{
     to {top:100%}
 }
 
-::-webkit-scrollbar{
-    display:none;
-}
+/*::-webkit-scrollbar{*/
+    /*display:none;*/
+/*}*/
