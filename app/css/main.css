@@ -1,6 +1,8 @@
 /*只设置container下面的第一层div隐藏*/
 #container > div {
     display: none;
+    height: 100%;
+    width: 100%;
 }
 
 header{
@@ -24,4 +26,78 @@ header a{
     color: #ffffff;
     letter-spacing: 1px;
 
+}
+
+/*翻页*/
+
+.trans-layer-next {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #000;
+    animation:mymove-next 1s 1;
+    animation-fill-mode:forwards;
+    animation-timing-function:ease-in-out;
+    z-index: 2;
+
+}
+
+.trans-layer-pre {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #000;
+    animation:mymove-pre 1s 1;
+    animation-fill-mode:backwards;
+    animation-timing-function:ease-in-out;
+    z-index: 2;
+
+}
+
+.section-trans-next{
+    animation:sectionMove-next 1s 1;
+    animation-fill-mode:forwards;
+    animation-timing-function:ease-in-out;
+}
+
+.section-trans-pre{
+    animation:sectionMove-pre 1s 1;
+    animation-fill-mode:backwards;
+    animation-timing-function:ease-in-out;
+}
+
+@keyframes sectionMove-next
+{
+    from {top:100%;}
+    to {top:0%}
+}
+
+@keyframes sectionMove-pre
+{
+    from {top:-100%;}
+    to {top:0%}
+}
+
+@keyframes mymove-next
+{
+    from {top:100%;}
+    to {top:-100%}
+}
+
+@keyframes mymove-pre
+{
+    from {top:-100%;}
+    to {top:100%}
+}
+
+::-webkit-scrollbar{
+    display:none;
 }

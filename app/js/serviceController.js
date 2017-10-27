@@ -8,7 +8,25 @@ var serviceController = function(){
         $("#container > div").hide();
         $("#service").show();
     };
+    var flag = true;
+
+
+    $(document).ready(function(){
+        $("#test").click(
+            function () {
+                clearPage($('.img-background'));
+                setTimeout(function () {
+                    nextPage($('.img-background'));
+                },200);
+            }
+        );
+    });
+
+
+
+
     var controller = {};
     controller.execute = showPage;
     return controller;
 }
+

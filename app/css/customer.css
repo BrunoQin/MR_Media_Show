@@ -1,0 +1,12 @@
+
+
+.customer-background {
+    background-size: cover;
+    background-image: url(../img/service-back.jpg);
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+
+}

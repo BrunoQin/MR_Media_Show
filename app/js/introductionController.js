@@ -4,7 +4,7 @@
  */
 //主页的初始化
 var introductionController = function(){
-    
+
     function configVideo(){
         window.onresize = function () {
             resizeToCover();
