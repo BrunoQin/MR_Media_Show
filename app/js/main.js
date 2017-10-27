@@ -25,11 +25,6 @@ $(function () {
     });
     crossroads.addRoute("customer",function(){
         loadPage(controller.customer);
-        if(currentPage<2){
-            nextPage($('.customer-background'));
-        }else{
-            prePage($('.customer-background'))
-        }
         currentPage = 2;
     });
     crossroads.addRoute("joinus",function(){
@@ -93,14 +88,3 @@ var prePage = function (pageDiv) {
 };
 
 
-$(document).bind('mousewheel DOMMouseScroll', function(event) {
-    console.log(event);
-    event.preventDefault();
-    var delta = event.originalEvent.wheelDelta || -event.originalEvent.detail;
-    if(delta<0){
-            nextPage($('.customer-background'));
-    }else{
-            prePage($('.service-background'));
-    }
-
-});
