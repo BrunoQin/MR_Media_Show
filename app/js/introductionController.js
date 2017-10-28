@@ -54,42 +54,42 @@ var introductionController = function(){
 
     function addAnimation(controller,id){
         id = "#"+id;
-        var textShow = TweenMax.staggerFromTo(id,100,
+        var textShow = TweenMax.staggerFromTo(id,1,
             {
                 y:0,
-                scale:0.8,
+                scale:1,
                 opacity:0,
             },
             {
                 y:-30,
-                scale:1.5,
+                scale:1,
                 opacity:1
             },
             1)
         var sceneShow = new ScrollMagic.Scene({
             triggerElement:id,
-            duration:250,
-            offset: -250
+            duration:150,
+            offset: -150
         })
             .setTween(textShow)
             // .addIndicators()
             .addTo(controller);
 
-        var textHide = TweenMax.staggerFromTo(id,100,
+        var textHide = TweenMax.staggerFromTo(id,1,
             {
                 y:-30,
-                scale:1.5,
+                scale:1,
                 opacity:1
             },
             {
                 y:-60,
-                scale:3,
+                scale:1.5,
                 opacity:0
             },
             1)
         var sceneHide = new ScrollMagic.Scene({
             triggerElement:id,
-            duration:250,
+            duration:350,
             offset: 0
         })
             .setTween(textHide)
