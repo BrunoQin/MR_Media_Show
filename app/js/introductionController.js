@@ -44,43 +44,56 @@ var introductionController = function(){
 
     //设置星球大战文字动画
     function setStartScroll(){
-        var controller = new ScrollMagic.Controller({container:"#wrapper"});
-        var textShow = TweenMax.staggerFromTo("#wrapper .item",1,
+        var controller = new ScrollMagic.Controller({container:"#wrapper-in"});
+        //设置文字框的ID
+        $("#wrapper-in>div").children("p").map(function (index,dom) {
+            dom.id = "p"+index;
+            addAnimation(controller,dom.id);
+        })
+    }
+
+    function addAnimation(controller,id){
+        id = "#"+id;
+        var textShow = TweenMax.staggerFromTo(id,100,
             {
+                y:0,
                 scale:0.8,
-                opacity:0
+                opacity:0,
             },
             {
+                y:-30,
                 scale:1.5,
                 opacity:1
             },
-            0.2)
+            1)
         var sceneShow = new ScrollMagic.Scene({
-            triggerElement:"#trigger",
-            duration:300,
-            offset: 100
+            triggerElement:id,
+            duration:250,
+            offset: -250
         })
             .setTween(textShow)
-            .addIndicators()
+            // .addIndicators()
             .addTo(controller);
 
-        var textHide = TweenMax.staggerFromTo("#wrapper .item",1,
+        var textHide = TweenMax.staggerFromTo(id,100,
             {
+                y:-30,
                 scale:1.5,
                 opacity:1
             },
             {
+                y:-60,
                 scale:3,
                 opacity:0
             },
-            0.2)
+            1)
         var sceneHide = new ScrollMagic.Scene({
-            triggerElement:"#trigger",
-            duration:200,
-            offset: 500
+            triggerElement:id,
+            duration:250,
+            offset: 0
         })
             .setTween(textHide)
-            .addIndicators()
+            // .addIndicators()
             .addTo(controller);
     }
 
