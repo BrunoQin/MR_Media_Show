@@ -18,16 +18,7 @@ var serviceController = function(){
     }
 
     function showPage(){
-        if(currentPage<1){
-            nextPage($('#service-content'));
-        }else{
-            prePage($('#service-content'))
-        }
-        setTimeout(function () {
-            $("#container > div").hide();
-            $("#service").show();
-        },1750);
-
+        flipPage($('#service-content'),$("#service"));
     }
 
 

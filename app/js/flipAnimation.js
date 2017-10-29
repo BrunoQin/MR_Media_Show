@@ -1,6 +1,21 @@
 /**
  * @Discription 翻页动画
+ * @Param pageDiv 需要滚动的div Cotroller 需要切换到的页
  */
+
+var flipPage = function (pageDiv,Controller) {
+    if(currentPage<1){
+        nextPage(pageDiv);
+    }else{
+        prePage(pageDiv)
+    }
+    setTimeout(function () {
+        $("#container > div").hide();
+        Controller.show();
+    },1750);
+
+};
+
 
 var isLoading = 0;
 
@@ -46,3 +61,4 @@ var prePage = function (pageDiv) {
     },2800);
 
 };
+
