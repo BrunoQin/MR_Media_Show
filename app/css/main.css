@@ -30,7 +30,7 @@ header a{
 
 }
 
-header a::after {
+header .menu::after {
     content:"";
     position: absolute;
     display: block;
@@ -43,7 +43,8 @@ header a::after {
     opacity: 0;
     transform: translateY(-100%);
 }
-header a:hover::after{
+
+header .menu:hover::after{
     opacity: 1;
     height: 5px;
 }
@@ -128,6 +129,22 @@ header a:hover::after{
 {
     from {top:-100%;}
     to {top:100%}
+}
+
+.process-container{
+    position: absolute;
+    opacity: 1;
+    bottom: -7px;
+    left: 0px;
+    width: 100%;
+    height: 5px;
+    background-color: darkgrey;
+}
+
+.process-line{
+    width: 0;
+    height: 100%;
+    background-color: #ffffff;
 }
 
 

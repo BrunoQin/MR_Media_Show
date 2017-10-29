@@ -5,11 +5,26 @@
 
 //联系我们界面的初始化
 var connectionController = function(){
+    //菜单栏设置
+    function menuConfig(){
+        $("header").children("a").map(function () {
+            $(this).removeClass("menu");
+            $(this).addClass("menu");
+        })
+        $("#joinus-menu").removeClass("menu");
+        $(".process-container").remove();
+        var process = $("<div class='process-container'> <div class='process-line'></div></div>");
+        process.appendTo($("#joinus-menu"));
+    }
+
     var showPage = function(){
         $("#container > div").hide();
-        $("#connection").show();
+        $("#joinus").show();
     };
     var controller = {};
-    controller.execute = showPage;
+    controller.execute = function() {
+        showPage();
+        menuConfig();
+    };
     return controller;
 }

@@ -29,15 +29,17 @@
 </head>
 <body>
     <header>
-        <a href="#introduction" class="active">关于我们</a>
-        <a href="#service" class="active">我们的服务</a>
-        <a href="#customer" class="active">我们的客户</a>
-        <a href="#joinus" class="active">加入我们</a>
-        <a href="#connection" class="active">联系我们</a>
+        <a href="#introduction" id="introduction-menu" >关于我们</a>
+        <a href="#service" id="service-menu">我们的服务</a>
+        <a href="#customer" id="customer-menu">我们的客户</a>
+        <a href="#joinus" id="joinus-menu">加入我们</a>
+        <a href="#connection" id="connection-menu">联系我们</a>
     </header>
     <div id="slide">
-        <div style="height:50%;width:100%;background-color: #e6e6e6"></div>
-        <div style="height:50%;width:100%;background-color: #35017f"></div>
+        <div style="height:100%;width:100%;background-color: #e6e6e6"></div>
+    </div>
+    <div id="slide2">
+        <!--<div style="height:50%;width:100%;background-color: #35017f"></div>-->
     </div>
     <div id="container">
         <div id="introduction" class="full-page" >
@@ -104,8 +106,10 @@
                 </div>
             </div>
         </div>
-        <div id="service" >
-            <div class="service-background"></div>
+        <div id="service" style="overflow-x: hidden;overflow-y: hidden;">
+            <div id="service-content" style="overflow-x: hidden;overflow-y: hidden;" class="full-page"> <div  class="service-background">
+            </div></div>
+
         </div>
         <div id="customer" >
             <div class="customer-background">
