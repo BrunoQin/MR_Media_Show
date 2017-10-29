@@ -5,12 +5,57 @@
 //主页的初始化
 var introductionController = function(){
 
+    //展示出当前的页面
+    function showPage(){
+        $("#container > div").hide();
+        $("#introduction").show();
+    };
+
     //设置背景视频的大小
     function configVideo(){
         window.onresize = function () {
             resizeToCover();
         };
         $(window).trigger("resize");
+    }
+
+    //菜单栏设置
+    function menuConfig(){
+        $("header").children("a").map(function () {
+            $(this).removeClass("menu");
+            $(this).addClass("menu");
+        })
+        $("#introduction-menu").removeClass("menu");
+        var process = $("<div class='process-container'> <div class='process-line'></div></div>");
+        process.appendTo($("#introduction-menu"));
+        //监听滚动事件
+        var scroll_height = $("#wrapper-in>div").height();
+        $("#wrapper-in").scroll(function () {
+            var current = $("#wrapper-in").scrollTop();
+            //当滑动到底的时候，监听鼠标滚轮事件，触发到下一页
+            if(current + $("#wrapper-in").height() >= scroll_height){
+                $(document).on("mousewheel",function (e) {
+                    var moveY = e.originalEvent.deltaY;
+                    if(moveY>0){
+                        current += moveY;
+                    }
+                    var progress = current/scroll_height*100;
+                    if(progress>=100){//当进度条满了的时候跳转页面
+                        $(document).off("mousewheel");
+                        $("#introduction-menu div").remove();
+                        document.getElementById("service-menu").click();
+                    }else{
+                        $("#introduction-menu .process-container .process-line").css({
+                            "width":progress+"%"
+                        });
+                    }
+                })
+            }
+            var progress = current/scroll_height*100;
+            $("#introduction-menu .process-container .process-line").css({
+                "width":progress+"%"
+            });
+        })
     }
 
     //背景视频图片实时平铺整个界面
@@ -36,12 +81,6 @@ var introductionController = function(){
         $('#video_contanier').scrollLeft((new_height - height) / 2);
     }
 
-    //展示出当前的页面
-    function showPage(){
-        $("#container > div").hide();
-        $("#introduction").show();
-    };
-
     //设置星球大战文字动画
     function setStartScroll(){
         var controller = new ScrollMagic.Controller({container:"#wrapper-in"});
@@ -52,6 +91,7 @@ var introductionController = function(){
         })
     }
 
+    //添加滑轮文字效果
     function addAnimation(controller,id){
         id = "#"+id;
         var textShow = TweenMax.staggerFromTo(id,1,
@@ -99,9 +139,10 @@ var introductionController = function(){
 
     var controller = {};
     var execute = function () {
+        showPage();
         configVideo();
         setStartScroll();
-        showPage();
+        menuConfig();
     }
     controller.execute = execute;
     return controller;
