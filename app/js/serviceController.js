@@ -14,32 +14,20 @@ var serviceController = function(){
         $(".process-container").remove();
         var process = $("<div class='process-container'> <div class='process-line'></div></div>");
         process.appendTo($("#service-menu"));
-        
+
     }
 
     function showPage(){
         $("#container > div").hide();
         $("#service").show();
-    };
-    var flag = true;
+    }
 
-
-    $(document).ready(function(){
-        $("#test").click(
-            function () {
-                clearPage($('.img-background'));
-                setTimeout(function () {
-                    nextPage($('.img-background'));
-                },200);
-            }
-        );
-    });
 
 
     $(document).bind('mousewheel DOMMouseScroll', function(event) {
-        console.log(event);
 
-        if(currentPage =1){
+        if(currentPage == 1){
+            console.log(currentPage);
             event.preventDefault();
         }
         var delta = event.originalEvent.wheelDelta || -event.originalEvent.detail;
@@ -50,9 +38,6 @@ var serviceController = function(){
         }
 
     });
-
-
-
 
     var controller = {};
     controller.execute = function(){
