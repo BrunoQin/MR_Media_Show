@@ -2,8 +2,10 @@
  * @Discription 翻页动画
  */
 
+var isLoading = 0;
 
 var nextPage = function (pageDiv) {
+    isLoading = 1;
     $('#slide1').addClass('trans-layer-next');
     setTimeout(function () {
         pageDiv.addClass('section-trans-next');
@@ -19,10 +21,12 @@ var nextPage = function (pageDiv) {
     },3700);
     setTimeout(function () {
         pageDiv.removeClass('section-trans-next');
+        isLoading = 0;
     },2500);
 };
 
 var prePage = function (pageDiv) {
+    isLoading = 1;
     $('#slide1').addClass('trans-layer-pre');
     setTimeout(function () {
         pageDiv.addClass('section-trans-pre');
@@ -38,6 +42,7 @@ var prePage = function (pageDiv) {
     },2800);
     setTimeout(function () {
         pageDiv.removeClass('section-trans-pre');
+        isLoading = 0;
     },2800);
 
 };

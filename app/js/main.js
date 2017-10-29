@@ -21,8 +21,11 @@ $(function () {
         currentPage = 1;
     });
     crossroads.addRoute("customer",function(){
-        loadPage(controller.customer);
-        currentPage = 2;
+        if(isLoading===0){
+            loadPage(controller.customer);
+            currentPage = 2;
+        }
+
     });
     crossroads.addRoute("joinus",function(){
         loadPage(controller.joinus);
