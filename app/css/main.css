@@ -19,13 +19,33 @@ header{
 }
 
 header a{
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
     color: #ffffff;
     letter-spacing: 1px;
+    text-decoration: none;
+    position: relative;
 
+}
+
+header a::after {
+    content:"";
+    position: absolute;
+    display: block;
+    bottom: -12px;
+    left:0px;
+    height: 0px;
+    width: 100%;
+    background-color: #ffffff;
+    transition: all .3s ease-out;
+    opacity: 0;
+    transform: translateY(-100%);
+}
+header a:hover::after{
+    opacity: 1;
+    height: 5px;
 }
 
 #web-background{
@@ -110,6 +130,4 @@ header a{
     to {top:100%}
 }
 
-/*::-webkit-scrollbar{*/
-    /*display:none;*/
-/*}*/
+
