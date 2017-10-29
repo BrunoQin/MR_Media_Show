@@ -18,15 +18,23 @@ var serviceController = function(){
     }
 
     function showPage(){
-        $("#container > div").hide();
-        $("#service").show();
+        if(currentPage<1){
+            nextPage($('#service-content'));
+        }else{
+            prePage($('#service-content'))
+        }
+        setTimeout(function () {
+            $("#container > div").hide();
+            $("#service").show();
+        },1750);
+
     }
 
 
 
     $(document).bind('mousewheel DOMMouseScroll', function(event) {
 
-        if(currentPage == 1){
+        if(currentPage === 1){
             console.log(currentPage);
             event.preventDefault();
         }

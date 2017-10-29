@@ -11,6 +11,7 @@
     <link href="css/joinus.css" rel="stylesheet" type="text/css"/>
     <link href="css/connection.css" rel="stylesheet" type="text/css"/>
     <link href="css/animate.css" rel="stylesheet" type="text/css"/>
+    <link href="css/flipAnimation.css" rel="stylesheet" type="text/css"/>
 
     <script src="vendor/jquery.js"></script>
     <script src="vendor/signals.js"></script>
@@ -26,6 +27,7 @@
     <script src="js/joinusController.js"></script>
     <script src="js/connectionController.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/flipAnimation.js"></script>
 </head>
 <body>
     <header>
@@ -35,12 +37,14 @@
         <a href="#joinus" id="joinus-menu">加入我们</a>
         <a href="#connection" id="connection-menu">联系我们</a>
     </header>
-    <div id="slide">
-        <div style="height:100%;width:100%;background-color: #e6e6e6"></div>
+
+    <div id="slide1">
+        <div style="height:100%;width:100%;background-color: #35017f;z-index: -100;position: absolute"></div>
     </div>
     <div id="slide2">
-        <!--<div style="height:50%;width:100%;background-color: #35017f"></div>-->
+        <div style="height:100%;width:100%;background-color: #e6e6e6;z-index: -100;position: absolute"></div>
     </div>
+
     <div id="container">
         <div id="introduction" class="full-page" >
             <div class="border" data-position = "top"></div>
@@ -107,8 +111,12 @@
             </div>
         </div>
         <div id="service" style="overflow-x: hidden;overflow-y: hidden;">
-            <div id="service-content" style="overflow-x: hidden;overflow-y: hidden;" class="full-page"> <div  class="service-background">
-            </div></div>
+            <div id="service-content" style="overflow-x: hidden;overflow-y: hidden;" class="full-page"> <div  class="service-background"></div>
+                <img src="img/service1.png" style="z-index: 100;zoom:0.5;position: absolute;margin-top: 35%;margin-left: 25%" />
+                <img src="img/service2.png" style="z-index: 100;zoom:0.5;position: absolute;margin-top: 35%;margin-left: 65%" />
+                <img src="img/service3.png" style="z-index: 100;zoom:0.5;position: absolute;margin-top: 10%;margin-left: 25%" />
+            </div>
+
 
         </div>
         <div id="customer" >
