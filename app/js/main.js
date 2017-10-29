@@ -11,14 +11,16 @@ var currentPage = 0;
 $(function () {
     //路由的设置
     crossroads.addRoute("introduction",function(){
-        $(".service-background").removeClass('background-animation');
-        loadPage(controller.introduction);
-        currentPage = 0;
+        if(isLoading===0) {
+            loadPage(controller.introduction);
+            currentPage = 0;
+        }
     });
     crossroads.addRoute("service",function(){
-        loadPage(controller.service);
-
-        currentPage = 1;
+        if(isLoading===0) {
+            loadPage(controller.service);
+            currentPage = 1;
+        }
     });
     crossroads.addRoute("customer",function(){
         if(isLoading===0){
@@ -28,12 +30,16 @@ $(function () {
 
     });
     crossroads.addRoute("joinus",function(){
-        loadPage(controller.joinus);
-        currentPage = 3;
+        if(isLoading===0) {
+            loadPage(controller.joinus);
+            currentPage = 3;
+        }
     });
     crossroads.addRoute("connection",function(){
-        loadPage(controller.connection);
-        currentPage = 4;
+        if(isLoading===0) {
+            loadPage(controller.connection);
+            currentPage = 4;
+        }
     });
     crossroads.routed.add(console.log, console); //log all routes
 
