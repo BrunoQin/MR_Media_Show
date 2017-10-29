@@ -4,14 +4,21 @@
  */
 
 var flipPage = function (pageDiv,Controller) {
-    if(currentPage<1){
+    var currentPages = {
+        "introduction" : 0,
+        "service" : 1,
+        "customer" : 2,
+        "joinus" : 3,
+        "connection" : 4
+    };
+    if(currentPage< currentPages[Controller]){
         nextPage(pageDiv);
     }else{
         prePage(pageDiv)
     }
     setTimeout(function () {
         $("#container > div").hide();
-        Controller.show();
+        $("#"+Controller).show();
     },1750);
 
 };

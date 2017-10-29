@@ -18,7 +18,7 @@ var serviceController = function(){
     }
 
     function showPage(){
-        flipPage($('#service-content'),$("#service"));
+        flipPage($('#service-content'),"service");
     }
 
 
