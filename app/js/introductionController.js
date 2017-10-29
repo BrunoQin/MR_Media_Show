@@ -26,6 +26,7 @@ var introductionController = function(){
             $(this).addClass("menu");
         })
         $("#introduction-menu").removeClass("menu");
+        $(".process-container").remove();
         var process = $("<div class='process-container'> <div class='process-line'></div></div>");
         process.appendTo($("#introduction-menu"));
         //监听滚动事件
@@ -42,7 +43,6 @@ var introductionController = function(){
                     var progress = current/scroll_height*100;
                     if(progress>=100){//当进度条满了的时候跳转页面
                         $(document).off("mousewheel");
-                        $("#introduction-menu div").remove();
                         document.getElementById("service-menu").click();
                     }else{
                         $("#introduction-menu .process-container .process-line").css({

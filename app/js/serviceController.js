@@ -4,7 +4,19 @@
  */
 //我们的服务界面的初始化
 var serviceController = function(){
-    var showPage = function(){
+    //菜单栏设置
+    function menuConfig(){
+        $("header").children("a").map(function () {
+            $(this).removeClass("menu");
+            $(this).addClass("menu");
+        })
+        $("#service-menu").removeClass("menu");
+        $(".process-container").remove();
+        var process = $("<div class='process-container'> <div class='process-line'></div></div>");
+        process.appendTo($("#service-menu"));
+    }
+
+    function showPage(){
         $("#container > div").hide();
         $("#service").show();
     };
@@ -26,7 +38,10 @@ var serviceController = function(){
 
 
     var controller = {};
-    controller.execute = showPage;
+    controller.execute = function(){
+        showPage();
+        menuConfig();
+    };
     return controller;
 }
 
