@@ -9,11 +9,12 @@ var serviceController = function(){
         $("header").children("a").map(function () {
             $(this).removeClass("menu");
             $(this).addClass("menu");
-        })
+        });
         $("#service-menu").removeClass("menu");
         $(".process-container").remove();
         var process = $("<div class='process-container'> <div class='process-line'></div></div>");
         process.appendTo($("#service-menu"));
+        
     }
 
     function showPage(){
@@ -32,6 +33,22 @@ var serviceController = function(){
                 },200);
             }
         );
+    });
+
+
+    $(document).bind('mousewheel DOMMouseScroll', function(event) {
+        console.log(event);
+
+        if(currentPage =1){
+            event.preventDefault();
+        }
+        var delta = event.originalEvent.wheelDelta || -event.originalEvent.detail;
+        if(delta<0){
+
+        }else{
+
+        }
+
     });
 
 

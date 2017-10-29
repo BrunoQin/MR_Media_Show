@@ -11,7 +11,12 @@ var currentPage = 0;
 $(function () {
     //路由的设置
     crossroads.addRoute("introduction",function(){
+        $(".service-background").removeClass('background-animation');
         loadPage(controller.introduction);
+
+        if(currentPage > 0) {
+            prePage($('#introduction'))
+        }
         currentPage = 0;
     });
     crossroads.addRoute("service",function(){
@@ -21,17 +26,23 @@ $(function () {
         }else{
             prePage($('.service-background'))
         }
+        setTimeout(function () {
+            $(".service-background").addClass('background-animation');
+        },1000);
         currentPage = 1;
     });
     crossroads.addRoute("customer",function(){
+        $(".service-background").removeClass('background-animation');
         loadPage(controller.customer);
         currentPage = 2;
     });
     crossroads.addRoute("joinus",function(){
+        $(".service-background").removeClass('background-animation');
         loadPage(controller.joinus);
         currentPage = 3;
     });
     crossroads.addRoute("connection",function(){
+        $(".service-background").removeClass('background-animation');
         loadPage(controller.connection);
         currentPage = 4;
     });
