@@ -11,10 +11,10 @@ var connectionController = function(){
             $(this).removeClass("menu");
             $(this).addClass("menu");
         })
-        $("#joinus-menu").removeClass("menu");
+        $("#connection").removeClass("menu");
         $(".process-container").remove();
         var process = $("<div class='process-container'> <div class='process-line'></div></div>");
-        process.appendTo($("#joinus-menu"));
+        process.appendTo($("#connection-menu"));
     }
 
     var showPage = function(){
