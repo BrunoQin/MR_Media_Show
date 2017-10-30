@@ -39,6 +39,16 @@ var serviceController = function(){
 
     });
 
+    $(document).scroll(function () {
+
+        if($(window).scrollTop() > 80){
+            $('header').addClass('scrolled')
+        }
+        else{
+            $('header').removeClass('scrolled')
+        }
+    })
+
     var controller = {};
     controller.execute = function(){
         showPage();

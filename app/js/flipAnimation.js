@@ -19,7 +19,7 @@ var flipPage = function (pageDiv,Controller) {
     setTimeout(function () {
         $("#container > div").hide();
         $("#"+Controller).show();
-    },1750);
+    },875);
 
 };
 
@@ -31,20 +31,20 @@ var nextPage = function (pageDiv) {
     $('#slide1').addClass('trans-layer-next');
     setTimeout(function () {
         pageDiv.addClass('section-trans-next');
-    },1000);
+    },500);
     setTimeout(function () {
         $('#slide2').addClass('trans-layer-next2');
-    },1000);
+    },500);
     setTimeout(function () {
         $('#slide1').removeClass('trans-layer-next');
-    },2500);
+    },1250);
     setTimeout(function () {
         $('#slide2').removeClass('trans-layer-next2');
-    },3700);
+    },1850);
     setTimeout(function () {
         pageDiv.removeClass('section-trans-next');
         isLoading = 0;
-    },2500);
+    },1250);
 };
 
 var prePage = function (pageDiv) {
@@ -52,20 +52,20 @@ var prePage = function (pageDiv) {
     $('#slide1').addClass('trans-layer-pre');
     setTimeout(function () {
         pageDiv.addClass('section-trans-pre');
-    },1000);
+    },500);
     setTimeout(function () {
         $('#slide2').addClass('trans-layer-pre2');
-    },1000);
+    },500);
     setTimeout(function () {
         $('#slide1').removeClass('trans-layer-pre');
-    },2500);
+    },1250);
     setTimeout(function () {
         $('#slide2').removeClass('trans-layer-pre2');
-    },2800);
+    },1400);
     setTimeout(function () {
         pageDiv.removeClass('section-trans-pre');
         isLoading = 0;
-    },2800);
+    },1400);
 
 };
 

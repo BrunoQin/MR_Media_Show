@@ -8,7 +8,7 @@
     bottom: 0;
     right: 0;
     background: #000;
-    animation:mymove-next 2.0s 1;
+    animation:mymove-next 1.0s 1;
     animation-fill-mode:forwards;
     animation-timing-function:linear;
     z-index: 1000;
@@ -24,7 +24,7 @@
     bottom: 0;
     right: 0;
     background: #000;
-    animation:mymove-next 1.5s 1;
+    animation:mymove-next 0.75s 1;
     animation-fill-mode:forwards;
     animation-timing-function:linear;
     z-index: 1000;
@@ -40,7 +40,7 @@
     bottom: 0;
     right: 0;
     background: #000;
-    animation:mymove-pre 2.5s 1;
+    animation:mymove-pre 1s 1;
     animation-fill-mode:backwards;
     animation-timing-function:linear;
     z-index: 1000;
@@ -56,7 +56,7 @@
     bottom: 0;
     right: 0;
     background: #000;
-    animation:mymove-pre 1.5s 1;
+    animation:mymove-pre 0.75s 1;
     animation-fill-mode:backwards;
     animation-timing-function:linear;
     z-index: 1000;
@@ -64,14 +64,14 @@
 }
 
 .section-trans-next{
-    animation:sectionMove-next 0.5s 1;
+    animation:sectionMove-next 0.25s 1;
     animation-fill-mode:forwards;
     animation-timing-function:linear;
     z-index: 1000;
 }
 
 .section-trans-pre{
-    animation:sectionMove-pre 0.5s 1;
+    animation:sectionMove-pre 0.25s 1;
     animation-fill-mode:backwards;
     animation-timing-function:linear;
     z-index: 1000;

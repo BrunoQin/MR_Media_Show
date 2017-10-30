@@ -40,6 +40,8 @@ var introductionController = function(){
                     var moveY = e.originalEvent.deltaY;
                     if(moveY>0){
                         current += moveY;
+                    }else if(moveY<0){
+                        $(document).off("mousewheel");
                     }
                     var progress = current/scroll_height*100;
                     if(progress>=100){//当进度条满了的时候跳转页面
@@ -85,38 +87,40 @@ var introductionController = function(){
     //设置星球大战文字动画
     function setStartScroll(){
         var controller = new ScrollMagic.Controller({container:"#wrapper-in"});
-        //设置文字框的ID
-        $("#wrapper-in>div").children("p").map(function (index,dom) {
-            dom.id = "p"+index;
-            addAnimation(controller,dom.id);
-        })
+        if($("#p0").length == 0){
+            $("#wrapper-in>div").children("p").map(function (index,dom) {
+                // 设置文字框的ID
+                dom.id = "p"+index;
+                addAnimation(controller,dom.id);
+            })
+        }
     }
 
     //添加滑轮文字效果
     function addAnimation(controller,id){
         id = "#"+id;
-        var textShow = TweenMax.staggerFromTo(id,1,
+        var textShow = TweenMax.staggerFromTo(id,0.5,
             {
                 y:0,
                 scale:1,
-                opacity:0,
+                opacity:0
             },
             {
                 y:-30,
                 scale:1,
                 opacity:1
             },
-            1)
+            0.1)
         var sceneShow = new ScrollMagic.Scene({
             triggerElement:id,
-            duration:150,
-            offset: -150
+            duration:250,
+            offset: -250
         })
             .setTween(textShow)
             // .addIndicators()
             .addTo(controller);
 
-        var textHide = TweenMax.staggerFromTo(id,1,
+        var textHide = TweenMax.staggerFromTo(id,0.5,
             {
                 y:-30,
                 scale:1,
@@ -127,10 +131,10 @@ var introductionController = function(){
                 scale:1.5,
                 opacity:0
             },
-            1)
-        var sceneHide = new ScrollMagic.Scene({
+            0.1)
+        var ceneHide = new ScrollMagic.Scene({
             triggerElement:id,
-            duration:350,
+            duration:250,
             offset: 0
         })
             .setTween(textHide)
