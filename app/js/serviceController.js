@@ -19,6 +19,7 @@ var serviceController = function(){
 
     function showPage(){
         flipPage($('#service-content'),"service");
+        $("header").css("background-color","").css("opacity",1);
     }
 
 

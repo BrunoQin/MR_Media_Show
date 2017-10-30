@@ -3,7 +3,7 @@
 .customer-background {
     /*background-size: cover;*/
     /*background-image: url(../img/service-back.jpg);*/
-    background-color: black;
+    background-color: darkslateblue;
     position: absolute;
     left: 0;
     top: 0;
@@ -16,7 +16,7 @@
     margin-top: 150px;
     height: 1200px;
     width: 100%;
-    background-color:palevioletred;
+    background-color:darkslateblue;
 }
 
 .content-line{
@@ -29,11 +29,19 @@
     padding-bottom: 30px;
 }
 .middle{
-    background-color: black;
+    background-color: firebrick;
+}
+
+.middle_2{
+    background-color: mediumpurple;
 }
 
 .brand{
-    background-color: mediumpurple;
+    background-color: chocolate;
+}
+
+.customer{
+    background-color: hotpink;
 }
 
 .left-content{
