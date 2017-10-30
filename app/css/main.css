@@ -23,6 +23,7 @@ header{
     -o-transition: all 1s;
     transition: all 1s;
     opacity: 1;
+    -webkit-transform: translateZ(0);
 }
 
 header.scrolled{
