@@ -9,6 +9,7 @@ var introductionController = function(){
     function showPage(){
         $("#container > div").hide();
         $("#introduction").show();
+        $("header").css("background-color","").css("opacity",1);
     };
 
     //设置背景视频的大小

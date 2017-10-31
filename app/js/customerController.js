@@ -19,6 +19,7 @@ var customerController = function(){
     function showPage(){
         $("#container > div").hide();
         $("#customer").show();
+        $("header").css("background-color","black").css("opacity",0.6);
     };
     $(document).ready(function(){
         $(".brand .logoClass img").mouseover(function () {
