@@ -11,7 +11,7 @@ var connectionController = function(){
             $(this).removeClass("menu");
             $(this).addClass("menu");
         })
-        $("#connection").removeClass("menu");
+        $("#connection-menu").removeClass("menu");
         $(".process-container").remove();
         var process = $("<div class='process-container'> <div class='process-line'></div></div>");
         process.appendTo($("#connection-menu"));
@@ -19,7 +19,7 @@ var connectionController = function(){
 
     var showPage = function(){
         $("#container > div").hide();
-        $("#joinus").show();
+        $("#connection").show();
         $("header").css("background-color","").css("opacity",1);
     };
     var controller = {};
