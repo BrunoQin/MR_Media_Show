@@ -18,18 +18,18 @@ var serviceController = function(){
     }
 
     function showPage(){
-        flipPage($('#service-content'),"service");
-        $("header").css("background-color","").css("opacity",1);
+        flipPage($('.service-background'),"service");
+        $("header").css("background-color","black").css("opacity",0.6);
     }
 
 
 
     $(document).bind('mousewheel DOMMouseScroll', function(event) {
 
-        if(currentPage === 1){
-            console.log(currentPage);
-            event.preventDefault();
-        }
+        // if(currentPage === 1){
+        //     console.log(currentPage);
+        //     event.preventDefault();
+        // }
         var delta = event.originalEvent.wheelDelta || -event.originalEvent.detail;
         if(delta<0){
 

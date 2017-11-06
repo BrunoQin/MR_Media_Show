@@ -1,17 +1,40 @@
 
 
 .service-background {
-    background-size: cover;
-    background-image: url(../img/service-back.png);
     position: absolute;
     left: 0;
     top: 0;
     height: 100%;
     width: 100%;
-    overflow-x: hidden;
-    overflow-y: hidden;
+}
+
+
+
+.service-content-background {
+    /*background-size: cover;*/
+    /*background-image: url(../img/service-back.jpg);*/
+    background-color: darkslateblue;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
 
 }
+
+service-.content-container{
+    height: 1200px;
+    width: 100%;
+    background-color:darkslateblue;
+}
+
+.service-middle{
+    background-color: mediumpurple;
+}
+.service-middle2{
+    background-color: darkslateblue;
+}
+
 
 
 
