@@ -14,12 +14,42 @@ var customerController = function(){
         $(".process-container").remove();
         var process = $("<div class='process-container'> <div class='process-line'></div></div>");
         process.appendTo($("#customer-menu"));
+        //监听滚动事件
+        var scroll_height = $(".content-container>div").height();
+        $(".content-container").scroll(function () {
+            var current = $(".content-container").scrollTop();
+            //当滑动到底的时候，监听鼠标滚轮事件，触发到下一页
+            if(current + $(".content-container").height() >= scroll_height){
+                $(document).on("mousewheel",function (e) {
+                    var moveY = e.originalEvent.deltaY;
+                    if(moveY>0){
+                        current += moveY;
+                    }else if(moveY<0){
+                        $(document).off("mousewheel");
+                    }
+                    var progress = current/scroll_height*100;
+                    if(progress>=100){//当进度条满了的时候跳转页面
+                        $(document).off("mousewheel");
+                        document.getElementById("joinus-menu").click();
+                    }else{
+                        $("#customer-menu .process-container .process-line").css({
+                            "width":progress+"%"
+                        });
+                    }
+                })
+            }
+            var progress = current/scroll_height*100;
+            $("#customer-menu .process-container .process-line").css({
+                "width":progress+"%"
+            });
+        })
     }
+
 
     function showPage(){
         $("#container > div").hide();
         $("#customer").show();
-        $("header").css("background-color","black").css("opacity",0.6);
+        $("header").css("background-color","").css("opacity",1);
     };
     $(document).ready(function(){
         $(".brand .logoClass img").mouseover(function () {
