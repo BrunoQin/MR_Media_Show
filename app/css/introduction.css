@@ -53,6 +53,12 @@
     justify-content: center;
     align-items: center;
     z-index: 10;
+    animation: bound 1s ease infinite alternate;
+}
+
+@keyframes bound {
+    from { bottom:50px }
+    to { bottom: 35px}
 }
 
 #nextPointer{
@@ -60,7 +66,8 @@
     width: 30px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("../img/next.jpeg");
+    background-image: url("../img/next.png");
+    opacity: 0.8;
     cursor: pointer;
 }
 
@@ -89,9 +96,6 @@
 .active-dot{
     background-color: #00ccff;
 }
-
-
-
 
 /* for Chrome */
 #wrapper-in::-webkit-scrollbar {
