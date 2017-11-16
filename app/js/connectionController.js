@@ -20,7 +20,6 @@ var connectionController = function(){
     var showPage = function(){
         $("#container > div").hide();
         $("#connection").show();
-        $("header").css("background-color","").css("opacity",1);
     };
     var controller = {};
     controller.execute = function() {

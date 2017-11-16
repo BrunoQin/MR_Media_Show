@@ -11,9 +11,21 @@ var introductionController = function(){
     function showPage(){
         $("#container > div").hide();
         $("#introduction").show();
-        $("header").css("background-color","").css("opacity",1);
         $("#dot1").addClass("active-dot");
-    };
+    }
+
+    //菜单栏设置
+    function menuConfig(){
+        $("header").children("a").map(function () {
+            $(this).removeClass("menu");
+            $(this).addClass("menu");
+        });
+        $("#introduction-menu").removeClass("menu");
+        $(".process-container").remove();
+        var process = $("<div class='process-container'> <div class='process-line'></div></div>");
+        process.appendTo($("#introduction-menu"));
+
+    }
 
     var goNext = function goNext(){
         var targetPos = page*(-100)+"%";
@@ -49,6 +61,7 @@ var introductionController = function(){
     var controller = {};
     var execute = function () {
         showPage();
+        menuConfig();
     }
     controller.execute = execute;
     controller.goNext = goNext;
