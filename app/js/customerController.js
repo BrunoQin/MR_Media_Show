@@ -53,7 +53,6 @@ var customerController = function(){
     function showPage(){
         $("#container > div").hide();
         $("#customer").show();
-        $("header").css("background-color","").css("opacity",1);
     };
     function getTargetName(url) {
         var splitList = url.split("/");
